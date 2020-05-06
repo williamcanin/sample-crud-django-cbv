@@ -1,6 +1,6 @@
 ## Sample CRUD Django Framework using Class-Based Views
 
-![Python package](https://github.com/williamcanin/simple-crud-django-cbv/workflows/Python%20package/badge.svg)
+![Python package](https://github.com/williamcanin/sample-crud-django-cbv/workflows/Python%20package/badge.svg)
 
 This repository contains a sample [Django](https://www.djangoproject.com/) crud using Class-Based Views. The project has no style sheet development, just pure html.
 
