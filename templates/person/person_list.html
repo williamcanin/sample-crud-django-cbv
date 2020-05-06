@@ -1,0 +1,25 @@
+{% extends '../base.html' %}
+
+{% block content %}
+
+    <h2>List</h2>
+    {% for person in object_list %}
+        <ul>
+            <li>
+                | {{ person.id }} | {{ person.first_name | title }} {{ person.last_name | title}} |
+                <a href="{% url 'person_detail' person.id %}">
+                    details
+                </a>
+            </li>
+        </ul>
+    {% empty %}
+        <p>The registration list is empty.</p>
+    {% endfor %}
+    
+    <button type="button" id="ActionCreatePerson">New</button>
+    <script type="text/javascript">
+        document.getElementById("ActionCreatePerson").onclick = function () {
+            location.href = "{% url 'person_create' %}";
+        }
+    </script>
+{% endblock %}

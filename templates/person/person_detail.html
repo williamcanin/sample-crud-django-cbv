@@ -1,0 +1,29 @@
+{% extends '../base.html' %}
+
+{% block content %}
+    <h2>Record details:</h2>
+    <p>ID: {{ object.id }}</p>
+    <p>First Name: {{ object.first_name }}</p>
+    <p>Last Name: {{ object.last_name }}</p>
+    <p>Age: {{ object.age }}</p>
+
+    <br>
+    <button type="button" id="ActionDeletePerson">Delete</button>
+    <button type="button" id="ActionUpdatePerson">Update</button>
+    <button type="button" id="backToList">List</button>
+
+    <script type="text/javascript">
+        document.getElementById("backToList").onclick = function () {
+            location.href = "{% url 'person_list' %}";
+        }
+        document.getElementById("ActionUpdatePerson").onclick = function () {
+            location.href = "{% url 'person_update' object.id %}";
+        }
+        document.getElementById("ActionDeletePerson").onclick = function () {
+            location.href = "{% url 'person_delete' object.id %}";
+        }
+    </script>
+{% endblock %}
+
+
+
