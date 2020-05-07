@@ -9,6 +9,7 @@ This repository contains a sample [Django](https://www.djangoproject.com/) crud 
 ```shell
 $ python -m venv venv
 $ . venv/bin/activate
+$ pip install --upgrade pip
 $ pip install -r requirements.txt
 $ pytest
 ```
